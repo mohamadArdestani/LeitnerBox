@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane fx:id="background" prefHeight="600.0" prefWidth="869.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="leitnerbox.ReviewController">
+   <bottom>
+      <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="869.0">
+         <children>
+            <TextFlow prefHeight="36.0" prefWidth="159.0">
+               <children>
+                  <Label fx:id="totalLable" prefHeight="33.0" prefWidth="91.0" text="%review.total" textFill="#a11616">
+                     <font>
+                        <Font name="AngsanaUPC" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="totalvaluelable" layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="58.0" textFill="#a11616">
+                     <font>
+                        <Font name="AngsanaUPC" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </TextFlow>
+            <TextFlow prefHeight="66.0" prefWidth="182.0">
+               <children>
+                  <Label fx:id="correctLable" prefHeight="33.0" prefWidth="112.0" text="%review.correct" textFill="#a11616">
+                     <font>
+                        <Font name="AngsanaUPC" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="correctValueLable" layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="60.0" textFill="#a11616">
+                     <font>
+                        <Font name="AngsanaUPC" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </TextFlow>
+            <TextFlow prefHeight="36.0" prefWidth="128.0">
+               <children>
+                  <Label fx:id="falseLable" prefHeight="33.0" prefWidth="77.0" text="%review.false" textFill="#a11616">
+                     <font>
+                        <Font name="AngsanaUPC" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="falseValueLable" layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="48.0" textFill="#a11616">
+                     <font>
+                        <Font name="AngsanaUPC" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </TextFlow>
+            <TextFlow prefHeight="36.0" prefWidth="133.0">
+               <children>
+                  <Label fx:id="cardLeftLable" prefHeight="33.0" prefWidth="82.0" text="%review.cardleft" textFill="#a11616">
+                     <font>
+                        <Font name="AngsanaUPC" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cardLeftValue" layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="24.0" textFill="#a11616">
+                     <font>
+                        <Font name="AngsanaUPC" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </TextFlow>
+            <TextFlow layoutX="444.0" layoutY="10.0" prefHeight="36.0" prefWidth="150.0">
+               <children>
+                  <Label fx:id="skipLabel" prefHeight="33.0" prefWidth="108.0" text="%review.skipcard" textFill="#a11616">
+                     <font>
+                        <Font name="AngsanaUPC" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="skipValueLabel" layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="41.0" textFill="#a11616">
+                     <font>
+                        <Font name="AngsanaUPC" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </TextFlow>
+            <TextFlow layoutX="318.0" layoutY="10.0" prefHeight="36.0" prefWidth="102.0">
+               <children>
+                  <Label fx:id="timeLable" prefHeight="33.0" prefWidth="40.0" text="%review.time" textFill="#a11616">
+                     <font>
+                        <Font name="AngsanaUPC" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="timeValueLable" layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="61.0" textFill="#a11616">
+                     <font>
+                        <Font name="AngsanaUPC" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </TextFlow>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox alignment="CENTER" prefHeight="580.0" prefWidth="869.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea id="cardTextArea" fx:id="cardTextArea" editable="false" prefHeight="213.0" prefWidth="251.0" scrollLeft="20.0" stylesheets="@../css/review.css" VBox.vgrow="NEVER">
+               <effect>
+                  <Blend mode="LIGHTEN" />
+               </effect>
+            </TextArea>
+            <HBox alignment="CENTER" prefHeight="216.0" prefWidth="669.0" VBox.vgrow="NEVER">
+               <children>
+                  <ImageView fx:id="image" fitHeight="219.0" fitWidth="241.0" pickOnBounds="true">
+                     
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="94.0" prefWidth="869.0" VBox.vgrow="NEVER">
+               <children>
+                  <Button fx:id="readButton" mnemonicParsing="false" onAction="#readAndTrue" onKeyPressed="#PressKey" prefHeight="48.0" prefWidth="110.0" text="%review.read.button" textFill="#b91c1c">
+                     <font>
+                        <Font name="AngsanaUPC" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="skipButton" mnemonicParsing="false" onAction="#skipAndFalse" onKeyPressed="#PressKey" prefHeight="48.0" prefWidth="110.0" text="%review.skip.button" textFill="#b91c1c">
+                     <font>
+                        <Font name="AngsanaUPC" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="speakButton" layoutX="210.0" layoutY="33.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="60.0" text="Speak" textFill="#b91c1c">
+                     <font>
+                        <Font name="AngsanaUPC" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="49.0" />
+                     </HBox.margin>
+                     <effect>
+                        <ImageInput>
+                           <source>
+                              <Image url="@../image/speakeron.png" />
+                           </source>
+                        </ImageInput>
+                     </effect>
+                  </Button>
+                  <Button fx:id="previousButton" mnemonicParsing="false" onAction="#previous" prefHeight="48.0" prefWidth="110.0" text="%review.previous.button" textFill="#b91c1c">
+                     <font>
+                        <Font name="AngsanaUPC" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="31.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="nextButton" mnemonicParsing="false" onAction="#next" prefHeight="48.0" prefWidth="110.0" text="%review.next.button" textFill="#b91c1c">
+                     <font>
+                        <Font name="AngsanaUPC" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="endButton" mnemonicParsing="false" onAction="#end" prefHeight="48.0" prefWidth="88.0" text="%review.end.button" textFill="#b91c1c">
+               <font>
+                  <Font name="AngsanaUPC" size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="speakerButton" mnemonicParsing="false" onMouseClicked="#changeSpeakerButtonStatus" prefHeight="48.0" prefWidth="32.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="@../image/speakeroff.png" />
+                     </source>
+                  </ImageInput>
+               </effect></Button>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>

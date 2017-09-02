@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="leitnerbox.EditController">
+   <top>
+      <VBox alignment="CENTER">
+         <children>
+            <TextFlow fx:id="editLabel" prefHeight="80.0" prefWidth="461.0" textAlignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" prefHeight="91.0" prefWidth="274.0" text="%edit.label" textAlignment="CENTER" textFill="#c8cfde">
+                     <font>
+                        <Font name="AngsanaUPC" size="65.0" />
+                     </font>
+                  </Label>
+               </children>
+            </TextFlow>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <HBox alignment="%edit.frontside.align" prefHeight="50.0" prefWidth="400.0">
+                     <children>
+                        <TextFlow prefHeight="50.0" textAlignment="%align2"  prefWidth="186.0">
+                           <children>
+                              <Label fx:id="editFrontsideLabel" prefHeight="50.0" prefWidth="186.0" text="%edit.frontside.label" alignment="%center-right"  textAlignment="%align2" textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="editFronsideTextArea" prefHeight="87.0" prefWidth="404.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="%edit.backside.align" prefHeight="47.0" prefWidth="400.0">
+                     <children>
+                        <TextFlow prefHeight="50.0" prefWidth="186.0" textAlignment="%align2">
+                           <children>
+                              <Label fx:id="editBacksideLabel" prefHeight="50.0" prefWidth="184.0" text="%edit.backside.label" alignment="%center-right"  textAlignment="%align2" textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="editBacksideTextArea" prefHeight="87.0" prefWidth="404.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="%edit.image.align" prefHeight="50.0" prefWidth="439.0">
+                     <children>
+                        <TextFlow prefHeight="50.0" prefWidth="182.0" textAlignment="%align2">
+                           <children>
+                              <Label fx:id="editImageLabel" prefHeight="50.0" prefWidth="181.0" text="%edit.image.label" alignment="%center-right"  textAlignment="%align2" textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextFlow>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="28.0" right="28.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="77.0" prefWidth="461.0">
+                     <children>
+                        <TextField fx:id="editPath" prefHeight="36.0" prefWidth="242.0" promptText="%edit.prompt.text" />
+                        <Button fx:id="editChoosefileButton" mnemonicParsing="false" onAction="#editImage" prefHeight="36.0" prefWidth="86.0" text="%edit.fileChooser.button" textFill="#cd1212" />
+                        <Button fx:id="editDeleteButton" layoutX="318.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteImage" prefHeight="36.0" prefWidth="82.0" text="%edit.remove.button" textFill="#cd1212" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="%edit.chapter.align" prefHeight="66.0" prefWidth="461.0">
+                     <children>
+                        <TextFlow prefHeight="50.0" prefWidth="177.0" textAlignment="%align2">
+                           <children>
+                              <Label fx:id="editChapterLabel" prefHeight="50.0" prefWidth="174.0" text="%edit.chapter.label" alignment="%center-right"  textAlignment="%align2" textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="6.0" left="30.0" right="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="56.0" prefWidth="461.0">
+                     <children>
+                        <ComboBox fx:id="editChapter" prefHeight="25.0" prefWidth="400.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="353.0" prefHeight="105.0" prefWidth="461.0">
+                     <children>
+                        <Button fx:id="editButton" mnemonicParsing="false" onAction="#edit" prefHeight="46.0" prefWidth="123.0" text="%edit.button" textFill="#d71515">
+                           <font>
+                              <Font name="AngsanaUPC" size="25.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

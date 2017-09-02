@@ -1,0 +1,50 @@
+/*
+ * Empty Stylesheet file.
+ */
+.tree-view{
+    -fx-background-color:transparent;
+    -fx-border-color: #c8cfde;
+}
+.tree-view .tree-cell:even{
+-fx-background-color:#c8cfde;
+-fx-text-fill: brown;
+
+}
+.tree-view .corner{
+  -fx-background-color:transparent;  
+}
+.tree-view .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+.tree-view .scroll-bar:horizontal{
+    -fx-background-color:transparent;
+}
+.root{
+   
+   -fx-background-color: transparent;
+}
+.table-view {
+    -fx-border-color: #c8cfde;
+   -fx-background-color: transparent;}
+.table-view .table-row-cell:filled:even{
+    -fx-background-color: #c8cfde;
+    
+}
+.table-view .table-column:filled{
+    -fx-text-fill: brown;
+}
+.table-view .column-header,
+.table-view .column-header-background,
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+.table-view .scroll-bar:vertical{
+    -fx-background-color:transparent;}
+.table-view .scroll-bar:horizontal{
+    -fx-background-color: transparent;
+}
+.table-view .corner{
+   -fx-background-color: transparent; 
+}
+
+

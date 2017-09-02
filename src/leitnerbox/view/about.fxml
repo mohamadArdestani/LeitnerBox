@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="leitnerbox.ConvertController">
+   <top>
+      <VBox alignment="CENTER">
+         <children>
+            <TextFlow prefHeight="101.0" prefWidth="393.0" textAlignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" prefHeight="101.0" prefWidth="247.0" text="%about.label" textAlignment="CENTER" textFill="#c8cfde">
+                     <font>
+                        <Font name="AngsanaUPC" size="71.0" />
+                     </font>
+                  </Label>
+               </children>
+            </TextFlow>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="359.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="404.0" text="%about.label1">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="32.0" prefWidth="404.0" text="%about.label2">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="400.0" text="mohamadardestani@gmail.com">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" alignment="%center-right" layoutY="42.0" prefHeight="20.0" prefWidth="400.0" text="%about.label3">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" alignment="%center-right" layoutY="74.0" prefHeight="20.0" prefWidth="400.0" text="%about.label4">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" alignment="%center-right" layoutY="106.0" prefHeight="20.0" prefWidth="400.0" text="%about.label5">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" alignment="%center-right" layoutY="132.0" prefHeight="20.0" prefWidth="400.0" text="%about.label6">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

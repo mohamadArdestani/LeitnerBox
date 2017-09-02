@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane id="AnchorPane" fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="400.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="leitnerbox.ImportController">
+   <children>
+      <DialogPane prefHeight="321.0" prefWidth="400.0">
+         <header>
+            <HBox alignment="CENTER" prefHeight="81.0" prefWidth="400.0">
+               <children>
+                  <TextFlow prefHeight="101.0" prefWidth="402.0" textAlignment="CENTER">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="101.0" prefWidth="269.0" text="%import.label" textAlignment="CENTER" textFill="#c8cfde">
+                           <font>
+                              <Font name="AngsanaUPC" size="%import.label.fontsize" />
+                           </font>
+                        </Label>
+                     </children>
+                  </TextFlow>
+               </children>
+            </HBox>
+         </header>
+         <content>
+            <VBox alignment="CENTER" fillWidth="false" prefHeight="300.0" prefWidth="400.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <TextField fx:id="importPath" prefHeight="25.0" prefWidth="250.0" promptText="%import.prompt.text" />
+                        <Button fx:id="importChooseFileButton" mnemonicParsing="false" onAction="#importFile" prefHeight="25.0" prefWidth="93.0" text="%import.fileChooser.button" textFill="#d71111" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Button fx:id="importButton" mnemonicParsing="false" onAction="#importZip" prefHeight="148.0" prefWidth="148.0" text="%import.button" textFill="#cd1b1b">
+                     <VBox.margin>
+                        <Insets top="120.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </content>
+      </DialogPane>
+   </children>
+</AnchorPane>

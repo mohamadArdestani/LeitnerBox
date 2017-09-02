@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<ScrollPane fx:id="background" fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="leitnerbox.MainController">
+   <content>
+      <BorderPane accessibleRole="TEXT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="869.0">
+         <top>
+            <GridPane prefHeight="71.0" prefWidth="869.0" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="25.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextFlow prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="90.0" prefWidth="417.0" text="%main.name" textFill="#c8cfde">
+                           <font>
+                              <Font name="AngsanaUPC" size="64.0" />
+                           </font></Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="20.0" />
+                     </opaqueInsets>
+                  </TextFlow>
+                  <TextFlow prefHeight="200.0" prefWidth="200.0" textAlignment="RIGHT" GridPane.columnIndex="1">
+                     <children>
+                        <Label fx:id="mainLabel" text="Label" textFill="#c8cfde">
+                           <font>
+                              <Font name="AngsanaUPC" size="64.0" />
+                           </font></Label>
+                     </children>
+                  </TextFlow>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="15.0" />
+               </BorderPane.margin>
+            </GridPane>
+         </top>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+         <left>
+            <HBox>
+               <BorderPane.margin>
+                  <Insets left="13.0" top="20.0" />
+               </BorderPane.margin>
+               <children>
+                  <VBox prefHeight="363.0" prefWidth="170.0">
+                     <children>
+                        <TextFlow prefHeight="40.0" prefWidth="170.0" textAlignment="CENTER">
+                           <children>
+                              <Label text="%main.lesson" textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="40.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                        <ListView fx:id="mainList" onMouseClicked="#chooseLesson" prefHeight="250.0" prefWidth="170.0" stylesheets="@../css/main.css">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ListView>
+                        <TextFlow prefHeight="185.0" prefWidth="170.0">
+                           <children>
+                              <Label onMouseClicked="#about" prefHeight="17.0" prefWidth="171.0" text="%about" textFill="#c8cfde">
+                                 <font>
+                                    <Font size="40.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="18.0" top="82.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL">
+                     <HBox.margin>
+                        <Insets bottom="110.0" left="20.0" />
+                     </HBox.margin>
+                  </Separator>
+               </children>
+            </HBox>
+         </left>
+         <center>
+            <GridPane prefHeight="422.0" prefWidth="620.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="254.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="455.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="283.0" minHeight="0.0" prefHeight="212.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="230.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox accessibleRole="BUTTON" alignment="CENTER" prefHeight="189.0" prefWidth="310.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <children>
+                        <ImageView fx:id="mainNew" accessibleRole="BUTTON" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#newLesson" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/new.png" />
+                           </image>
+                        </ImageView>
+                        <TextFlow prefHeight="200.0" prefWidth="200.0" textAlignment="CENTER">
+                           <children>
+                              <Label text="%main.new" textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="38.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <children>
+                        <ImageView fx:id="mainImport" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#importLesson" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/import.png" />
+                           </image>
+                        </ImageView>
+                        <TextFlow prefHeight="200.0" prefWidth="200.0" textAlignment="CENTER">
+                           <children>
+                              <Label text="%main.import" textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="38.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <children>
+                        <ImageView fx:id="mainConvert" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#convertLesson" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/convert.png" />
+                           </image>
+                        </ImageView>
+                        <TextFlow prefHeight="200.0" prefWidth="200.0" textAlignment="CENTER">
+                           <children>
+                              <Label text="%main.convert" textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="38.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <children>
+                        <ImageView fx:id="mainSetting" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#setting" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/setting.png" />
+                           </image>
+                        </ImageView>
+                        <TextFlow prefHeight="200.0" prefWidth="200.0" textAlignment="CENTER">
+                           <children>
+                              <Label text="%main.setting" textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="38.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

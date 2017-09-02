@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<ScrollPane fx:id="background" fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="leitnerbox.NewController">
+   
+   <content>
+      <BorderPane prefHeight="600.0" prefWidth="869.0">
+         <center>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="869.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefWidth="362.0" style="-fx-border-color: #c8cfde;">
+                     <HBox.margin>
+                        <Insets bottom="30.0" left="50.0" right="50.0" top="50.0" />
+                     </HBox.margin>
+                     <children>
+                        <TextFlow prefHeight="60.0" prefWidth="333.0" textAlignment="CENTER">
+                           <children>
+                              <Label text="%new.create.label" textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="45.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                        <TextFlow prefHeight="40.0" prefWidth="333.0" textAlignment="%new.lessonName.label.align">
+                           <children>
+                              <Label text="%new.lessonName.label" textAlignment="%align2" alignment="%center-right"  textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                        <TextField fx:id="newLessonName" prefHeight="33.0" prefWidth="333.0" />
+                        <TextFlow layoutX="11.0" layoutY="75.0" prefHeight="36.0" prefWidth="333.0" textAlignment="%new.lessonName.label.align">
+                           <children>
+                              <Label alignment="%center-right" textAlignment="%align2" text="%new.chapters" textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                        <ComboBox fx:id="newLessonchapters" prefHeight="33.0" prefWidth="333.0" />
+                        <TextFlow prefHeight="40.0" prefWidth="333.0" textAlignment="%new.chapters.align">
+                           <children>
+                              <Label alignment="%center-right" prefHeight="50.0" prefWidth="168.0" text="%new.chapter.label" textAlignment="%align2" textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                        <HBox prefHeight="33.0" prefWidth="333.0">
+                           <children>
+                              <TextField fx:id="newAddChapter" prefHeight="33.0" prefWidth="192.0" />
+                              <Button fx:id="newAddChapterButton" mnemonicParsing="false" onAction="#addChapter" prefHeight="33.0" prefWidth="73.0" text="%new.add.button" textFill="#d01515" />
+                              <Button fx:id="newRemoveChapterButton" layoutX="162.0" layoutY="10.0" mnemonicParsing="false" onAction="#removeChapter" prefHeight="33.0" prefWidth="73.0" text="%new.chapter.remove.button" textFill="#d01515">
+                                 <HBox.margin>
+                                    <Insets left="2.0" />
+                                 </HBox.margin></Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Button fx:id="newCreateLessonButton" mnemonicParsing="false" onAction="#lessonCreate" prefHeight="41.0" prefWidth="72.0" text="%new.create.button" textFill="#d71313">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="newCreateCardButton" disable="true" mnemonicParsing="false" onAction="#createCard" prefHeight="41.0" prefWidth="102.0" text="%new.createCard.button" textFill="#d71313" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="45.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" maxWidth="-Infinity" prefWidth="362.0" style="-fx-border-color: #c8cfde;">
+                     <HBox.margin>
+                        <Insets bottom="30.0" left="50.0" right="50.0" top="50.0" />
+                     </HBox.margin>
+                     <children>
+                        <TextFlow prefHeight="60.0" prefWidth="333.0" textAlignment="CENTER">
+                           <children>
+                              <Label text="%new.createCards.label" textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="45.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                        <TextFlow prefHeight="53.0" prefWidth="333.0" textAlignment="%new.fronside.label.align">
+                           <children>
+                              <Label text="%new.fronside.label" alignment="%center-right" textAlignment="%align2" textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                        <TextArea fx:id="newCardFrontside" disable="true" prefHeight="24.0" prefWidth="333.0" />
+                        <TextFlow prefHeight="36.0" prefWidth="333.0" textAlignment="%new.backside.label.align">
+                           <children>
+                              <Label text="%new.backside.label" alignment="%center-right" textAlignment="%align2" textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                        <TextArea fx:id="newCardBackside" disable="true" layoutX="11.0" layoutY="126.0" prefHeight="24.0" prefWidth="333.0" />
+                        <TextFlow layoutX="11.0" layoutY="244.0" prefHeight="38.0" prefWidth="333.0" textAlignment="%new.image.label.align">
+                           <children>
+                              <Label text="%new.image.label" alignment="%center-right" textAlignment="%align2" textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                        <HBox>
+                           <children>
+                              <TextField fx:id="newImage" disable="true" prefHeight="34.0" prefWidth="237.0" />
+                              <Button fx:id="NewChooseFileButton" disable="true" mnemonicParsing="false" onAction="#addImage" prefHeight="30.0" prefWidth="104.0" text="%new.choosefile.button" textFill="#cd1b1b">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <TextFlow prefHeight="53.0" prefWidth="333.0" textAlignment="%new.chapter.label.align">
+                           <children>
+                              <Label text="%new.chapter.label" alignment="%center-right" textAlignment="%align2" textFill="#c8cfde">
+                                 <font>
+                                    <Font name="AngsanaUPC" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                        <ComboBox fx:id="newCardChapter" prefHeight="33.0" prefWidth="333.0" />
+                        <HBox alignment="CENTER">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <Button fx:id="newAddCardButton" disable="true" mnemonicParsing="false" onAction="#addCard" prefHeight="42.0" prefWidth="72.0" text="%new.add.button" textFill="#da1818" />
+                              <Button fx:id="newAllcardButton" disable="true" mnemonicParsing="false" onAction="#seeAllCard" prefHeight="42.0" prefWidth="96.0" text="%new.allCard" textFill="#da1818">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </center>
+         <bottom>
+            <HBox alignment="CENTER" BorderPane.alignment="TOP_LEFT">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" />
+               </BorderPane.margin>
+               <children>
+                  <Button fx:id="home" alignment="CENTER" mnemonicParsing="false" onAction="#home" prefHeight="46.0" prefWidth="104.0" text="%home" textFill="#d71515" />
+                  <Button fx:id="newSaveButton" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#save" prefHeight="46.0" prefWidth="104.0" text="%new.save.button" textFill="#d71515">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </content>
+</ScrollPane>

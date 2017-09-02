@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lesson name="sample" chapters="All,first,two,three">     
+    <card id="1" frontside="hello" backside="سلام" chapter="three" level="0" testhit="0" img=""/>
+    <card id="2" frontside="cut" backside="بریدن" chapter="All" level="0" testhit="0" img=""/>
+    <card id="3" frontside="animal" backside="حیوان" chapter="All" level="0" testhit="0" img="Koala.jpg"/>
+    <card id="4" frontside="penguin" backside="پنگوئن" chapter="two" level="0" testhit="0" img="Penguins.jpg"/>
+    <card id="5" frontside="dog" backside="سگ" chapter="All" level="0" testhit="0" img=""/>
+    <card id="6" frontside="paper" backside="کاغذ" chapter="first" level="0" testhit="0" img=""/>
+    <card id="7" frontside="think" backside="فکر کردن" chapter="All" level="0" testhit="0" img=""/>
+    <card id="8" frontside="wish" backside="آرزو" chapter="All" level="0" testhit="0" img=""/>
+    <card id="9" frontside="friend" backside="دوست" chapter="All" level="0" testhit="0" img=""/>
+    <card id="10" frontside="similar" backside="شبیه بودن" chapter="first" level="0" testhit="0" img=""/>
+</lesson>

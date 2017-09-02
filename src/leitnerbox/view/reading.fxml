@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="background" prefHeight="469.0" prefWidth="419.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="leitnerbox.ReadingController">
+   <center>
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="419.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="selectSectionLabel" text="%reading.tab1">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="387.0" prefWidth="419.0">
+                     <children>
+                        <Label layoutX="4.0" layoutY="1.0" prefHeight="40.0" prefWidth="129.0" text="%reading.select.chapter">
+                           <font>
+                              <Font name="AngsanaUPC" size="28.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutY="158.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-10.0" />
+                        <Label fx:id="cardOrderLabel" layoutX="4.0" layoutY="270.0" prefHeight="38.0" prefWidth="177.0" text="%reading.cardorder">
+                           <font>
+                              <Font name="AngsanaUPC" size="27.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutY="262.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="262.0" />
+                        <RadioButton fx:id="allCardRadioButton" layoutX="13.0" layoutY="41.0" mnemonicParsing="false" selected="true" text="%reading.option1" AnchorPane.leftAnchor="13.0">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="group" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="unreadCardRadioButton" layoutX="13.0" layoutY="70.0" mnemonicParsing="false" text="%reading.option2" toggleGroup="$group" AnchorPane.leftAnchor="13.0" />
+                        <RadioButton fx:id="expiredCardRadioButton" layoutX="14.0" layoutY="99.0" mnemonicParsing="false" text="%reading.option3" toggleGroup="$group" AnchorPane.leftAnchor="13.0" />
+                        <RadioButton fx:id="selectedCardRadioButton" disable="true" layoutX="13.0" layoutY="128.0" mnemonicParsing="false" text="%reading.option4" toggleGroup="$group" />
+                        <CheckBox fx:id="restrictionCheckBox" layoutX="3.0" layoutY="170.0" mnemonicParsing="false" onAction="#restriction" selected="true" text="%reading.restriction">
+                           <font>
+                              <Font name="AngsanaUPC" size="27.0" />
+                           </font>
+                        </CheckBox>
+                        <RadioButton fx:id="timeRadioButton" layoutX="20.0" layoutY="222.0" mnemonicParsing="false" onAction="#timeRestriction" text="%reading.time">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="restrictiongroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <TextField fx:id="timeValue" disable="true" layoutX="76.0" layoutY="216.0" prefHeight="31.0" prefWidth="65.0" promptText="%reading.time.prompt" />
+                        <RadioButton fx:id="cardnumberRadioButton" layoutX="192.0" layoutY="223.0" mnemonicParsing="false" onAction="#cardRestriction" selected="true" text="%reading.cardnumber" toggleGroup="$restrictiongroup" />
+                        <TextField fx:id="cardnumberValue" layoutX="295.0" layoutY="216.0" prefHeight="31.0" prefWidth="70.0" text="15" />
+                        <RadioButton fx:id="frontSideRadioButton" layoutX="9.0" layoutY="317.0" mnemonicParsing="false" selected="true" text="%reading.frontside">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="cardgroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="backSideRadioButton" layoutX="10.0" layoutY="346.0" mnemonicParsing="false" text="%reading.backside" toggleGroup="$cardgroup" />
+                        <ComboBox fx:id="chapterList" layoutX="117.0" layoutY="9.0" prefHeight="25.0" prefWidth="259.0" promptText="%reading.allchapter" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab fx:id="scheduleTab" onSelectionChanged="#planChange" text="%reading.tab2">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="370.0" prefWidth="383.0">
+                     <children>
+                        <Label fx:id="delayLevel0" layoutX="14.0" layoutY="50.0" prefHeight="17.0" prefWidth="113.0" text="%reading.delay0" textFill="#f8f5f5" />
+                        <Label fx:id="days0Label" layoutX="127.0" layoutY="50.0" text="%reading.days" textFill="#f8f5f5" />
+                        <TextField fx:id="days0Value" layoutX="161.0" layoutY="45.0" prefHeight="23.0" prefWidth="72.0" />
+                        <Label fx:id="hour0Label" layoutX="262.0" layoutY="53.0" text="%reading.hour" textFill="#f8f5f5" />
+                        <TextField fx:id="hour0Value" layoutX="289.0" layoutY="45.0" prefHeight="31.0" prefWidth="50.0" />
+                        <Label fx:id="delayLevel1" layoutX="14.0" layoutY="82.0" prefHeight="17.0" prefWidth="113.0" text="%reading.delay1" textFill="#f8f5f5" />
+                        <Label fx:id="days1Label" layoutX="127.0" layoutY="82.0" text="%reading.days" textFill="#f8f5f5" />
+                        <TextField fx:id="days1Value" layoutX="161.0" layoutY="77.0" prefHeight="23.0" prefWidth="72.0" />
+                        <Label fx:id="hour1Label" layoutX="262.0" layoutY="85.0" text="%reading.hour" textFill="#f8f5f5" />
+                        <TextField fx:id="hour1Value" layoutX="289.0" layoutY="77.0" prefHeight="31.0" prefWidth="50.0" />
+                        <Label fx:id="delayLevel2" layoutX="14.0" layoutY="114.0" prefHeight="17.0" prefWidth="113.0" text="%reading.delay2" textFill="#f8f5f5" />
+                        <Label fx:id="days2Label" layoutX="127.0" layoutY="114.0" text="%reading.days" textFill="#f8f5f5" />
+                        <TextField fx:id="days2Value" layoutX="161.0" layoutY="109.0" prefHeight="23.0" prefWidth="72.0" />
+                        <Label fx:id="hour2Label" layoutX="262.0" layoutY="117.0" text="%reading.hour" textFill="#f8f5f5" />
+                        <TextField fx:id="hour2Value" layoutX="289.0" layoutY="109.0" prefHeight="31.0" prefWidth="50.0" />
+                        <Label fx:id="delayLevel3" layoutX="14.0" layoutY="146.0" prefHeight="17.0" prefWidth="113.0" text="%reading.delay3" textFill="#f8f5f5" />
+                        <Label fx:id="days3Label" layoutX="127.0" layoutY="146.0" text="%reading.days" textFill="#f8f5f5" />
+                        <TextField fx:id="days3Value" layoutX="161.0" layoutY="141.0" prefHeight="23.0" prefWidth="72.0" />
+                        <Label fx:id="hour3Label" layoutX="262.0" layoutY="147.0" text="%reading.hour" textFill="#f8f5f5" />
+                        <TextField fx:id="hour3Value" layoutX="289.0" layoutY="141.0" prefHeight="31.0" prefWidth="50.0" />
+                        <Label fx:id="delayLevel4" layoutX="14.0" layoutY="178.0" prefHeight="17.0" prefWidth="113.0" text="%reading.delay4" textFill="#f8f5f5" />
+                        <Label fx:id="days4Label" layoutX="127.0" layoutY="178.0" text="%reading.days" textFill="#f8f5f5" />
+                        <TextField fx:id="days4Value" layoutX="161.0" layoutY="173.0" prefHeight="23.0" prefWidth="72.0" />
+                        <Label fx:id="hour4Label" layoutX="262.0" layoutY="179.0" text="%reading.hour" textFill="#f8f5f5" />
+                        <TextField fx:id="hour4Value" layoutX="289.0" layoutY="173.0" prefHeight="31.0" prefWidth="50.0" />
+                        <Label fx:id="delayLevel5" layoutX="14.0" layoutY="210.0" prefHeight="17.0" prefWidth="113.0" text="%reading.delay5" textFill="#f8f5f5" />
+                        <Label fx:id="days5Label" layoutX="127.0" layoutY="210.0" text="%reading.days" textFill="#f8f5f5" />
+                        <TextField fx:id="days5Value" layoutX="161.0" layoutY="205.0" prefHeight="23.0" prefWidth="72.0" />
+                        <Label fx:id="hour5Label" layoutX="262.0" layoutY="211.0" text="%reading.hour" textFill="#f8f5f5" />
+                        <TextField fx:id="hour5Value" layoutX="289.0" layoutY="205.0" prefHeight="31.0" prefWidth="50.0" />
+                        <Label fx:id="delayLevel6" layoutX="14.0" layoutY="242.0" prefHeight="17.0" prefWidth="113.0" text="%reading.delay6" textFill="#f8f5f5" />
+                        <Label fx:id="days6Label" layoutX="127.0" layoutY="242.0" text="%reading.days" textFill="#f8f5f5" />
+                        <TextField fx:id="days6Value" layoutX="161.0" layoutY="237.0" prefHeight="23.0" prefWidth="72.0" />
+                        <Label fx:id="hour6Label" layoutX="262.0" layoutY="243.0" text="%reading.hour" textFill="#f8f5f5" />
+                        <TextField fx:id="hour6Value" layoutX="289.0" layoutY="237.0" prefHeight="31.0" prefWidth="50.0" />
+                        <Label fx:id="delayLevel7" layoutX="14.0" layoutY="274.0" prefHeight="17.0" prefWidth="113.0" text="%reading.delay7" textFill="#f8f5f5" />
+                        <Label fx:id="days7Label" layoutX="127.0" layoutY="274.0" text="%reading.days" textFill="#f8f5f5" />
+                        <TextField fx:id="days7Value" layoutX="161.0" layoutY="269.0" prefHeight="23.0" prefWidth="72.0" />
+                        <Label fx:id="hour7Label" layoutX="262.0" layoutY="275.0" text="%reading.hour" textFill="#f8f5f5" />
+                        <TextField fx:id="hour7Value" layoutX="289.0" layoutY="269.0" prefHeight="31.0" prefWidth="50.0" />
+                        <Label fx:id="delayLevel8" layoutX="14.0" layoutY="306.0" prefHeight="17.0" prefWidth="113.0" text="%reading.delay8" textFill="#f8f5f5" />
+                        <Label fx:id="days8Label" layoutX="127.0" layoutY="306.0" text="%reading.days" textFill="#f8f5f5" />
+                        <TextField fx:id="days8Value" layoutX="161.0" layoutY="301.0" prefHeight="23.0" prefWidth="72.0" />
+                        <Label fx:id="hour8Label" layoutX="262.0" layoutY="307.0" text="%reading.hour" textFill="#f8f5f5" />
+                        <TextField fx:id="hour8Value" layoutX="289.0" layoutY="301.0" prefHeight="31.0" prefWidth="50.0" />
+                        <Label fx:id="delayLevel9" layoutX="14.0" layoutY="338.0" prefHeight="17.0" prefWidth="113.0" text="%reading.delay9" textFill="#f8f5f5" />
+                        <Label fx:id="days9Label" layoutX="127.0" layoutY="338.0" text="%reading.days" textFill="#f8f5f5" />
+                        <TextField fx:id="days9Value" layoutX="161.0" layoutY="333.0" prefHeight="23.0" prefWidth="72.0" />
+                        <Label fx:id="hour9Label" layoutX="262.0" layoutY="339.0" text="%reading.hour" textFill="#f8f5f5" />
+                        <TextField fx:id="hour9Value" layoutX="289.0" layoutY="333.0" prefHeight="31.0" prefWidth="50.0" />
+                        <Label fx:id="planLabel" layoutX="-4.0" layoutY="-2.0" prefHeight="50.0" prefWidth="118.0" text="%reading.plan">
+                           <font>
+                              <Font name="AngsanaUPC" size="35.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="planList" layoutX="114.0" layoutY="11.0" onAction="#planChange" prefHeight="25.0" prefWidth="225.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="%reading.tab3">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="370.0" prefWidth="383.0">
+                     <children>
+                        <Label fx:id="pronounciationLabel" layoutX="20.0" layoutY="23.0" prefHeight="44.0" prefWidth="152.0" text="%reading.pro">
+                           <font>
+                              <Font name="AngsanaUPC" size="31.0" />
+                           </font>
+                        </Label>
+                        <CheckBox fx:id="enableCheckBox" layoutX="20.0" layoutY="67.0" mnemonicParsing="false" text="%reading.enable" />
+                        <ChoiceBox fx:id="engineList" layoutX="69.0" layoutY="103.0" prefWidth="150.0" />
+                        <Label fx:id="engineLabel" layoutX="20.0" layoutY="102.0" text="%reading.engin">
+                           <font>
+                              <Font name="AngsanaUPC" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="voiceLabel" layoutX="21.0" layoutY="137.0" text="%reading.voice">
+                           <font>
+                              <Font name="AngsanaUPC" size="24.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="voiceList" layoutX="69.0" layoutY="139.0" prefWidth="150.0" />
+                        <Separator layoutX="28.0" layoutY="188.0" prefWidth="200.0" />
+                        <Label fx:id="cardOptionLabel" layoutX="26.0" layoutY="201.0" prefHeight="44.0" prefWidth="208.0" text="%reading.cardoption">
+                           <font>
+                              <Font name="AngsanaUPC" size="31.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="shuffleCardRadioButton" layoutX="26.0" layoutY="245.0" mnemonicParsing="false" selected="true" text="%reading.shuffle">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="cardoptiongroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="regularCardRadioButton" layoutX="26.0" layoutY="281.0" mnemonicParsing="false" text="%reading.regular" toggleGroup="$cardoptiongroup" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <ButtonBar prefHeight="26.0" prefWidth="419.0" BorderPane.alignment="CENTER_LEFT">
+         <buttons>
+            <Button fx:id="optionOkButton" mnemonicParsing="false" onAction="#getOption" prefHeight="25.0" prefWidth="55.0" text="%reading.ok.button" textFill="#bf2929">
+               <font>
+                  <Font name="AngsanaUPC" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="optionCancelButton" minWidth="57.0" mnemonicParsing="false" onAction="#closeOption" prefHeight="45.0" prefWidth="55.0" text="%reading.cancel.button" textFill="#bf2929">
+               <font>
+                  <Font name="AngsanaUPC" size="21.0" />
+               </font>
+            </Button>
+         </buttons>
+      </ButtonBar>
+   </bottom>
+</BorderPane>

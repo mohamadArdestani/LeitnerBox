@@ -1,0 +1,13 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+#start{
+    -fx-border-radius: 400;
+    -fx-background-color: greenyellow;
+    -fx-border-width: 2;
+    
+}

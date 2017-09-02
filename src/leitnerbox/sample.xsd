@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="lesson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="card" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="id" use="required"/>
+                <xs:attribute type="xs:string" name="frontside" use="required"/>
+                <xs:attribute type="xs:string" name="backside" use="required"/>
+                <xs:attribute type="xs:string" name="chapter" use="required"/>
+                <xs:attribute type="xs:string" name="level" use="required"/>
+                <xs:attribute type="xs:string" name="testhit" use="required"/>
+                <xs:attribute type="xs:string" name="img" use="optional"/>
+                <xs:attribute type="xs:string" name="status" use="optional"/>
+                <xs:attribute type="xs:string" name="expiredtime" use="optional"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="name" use="required"/>
+      <xs:attribute type="xs:string" name="chapters" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
