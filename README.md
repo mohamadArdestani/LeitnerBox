@@ -4,6 +4,8 @@ open source and free javaFx application that anyone can use
 
 freely but non-commercial usage.
 
+run on windows,mac and linux
+
 Developer:mohamad ardestani
 
 Email:mohamadardestani@gmail.com
